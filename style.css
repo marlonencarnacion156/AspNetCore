@@ -1,0 +1,472 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+*:focus{
+    outline: none;
+}
+body{
+    min-height: 100vh;
+    background: #f2f7fb;
+    display: flex;
+}
+/*-----------------------Main----------------------*/
+.main{
+    /*padding: 0 48px 48px 48px;*/
+    color: #333;
+    width: 100%;
+}
+
+.main h1{
+    margin: 24px;
+}
+
+.main p{
+    line-height: 20px;
+    letter-spacing: 0.7px;
+    margin-bottom: 12px;
+    
+}
+
+.main nav{
+    width: 100%;
+    height: 60px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    color: #6B3B12;
+    justify-content: space-between;
+    border-bottom: solid 0.5px #DEE2E6;
+}
+
+.main nav h1 i{
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.main nav h4{
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.main nav h4 img{
+    width: 30px;
+    border-radius: 50%;
+    margin: 10px;
+}
+
+.main .accion{
+    display: flex;
+    justify-content: space-between;
+    background: #fff;
+    padding: 10px;
+    color: #6B3B12;
+    border: solid 0.5px #dee2e6;
+    align-items: center;
+    margin: 20px;
+}
+
+
+.main .accion button{
+    padding: 8px;
+    color: #fff;
+    font-size: 16px;
+    background: #6B3B12;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.main .accion button:hover{
+    background: #CA8B2A;
+    transition: ease 0.5s;
+}
+
+/*-----------------------Side----------------------*/
+.side{
+    width: 265px;
+    background: #CA8B2A;
+    color: #fff;
+    position: relative;
+    min-height: 100vh;
+    transition: width 0.4s;
+}
+
+.side h1{
+    text-transform: uppercase;
+    font-size: 1.5em;
+    margin: 28px 5px;
+    align-items: center;
+    position: relative;
+}
+
+
+.side h1 img{
+    margin-right: 24px;
+    width: 265px;
+}
+
+.side ul{
+    list-style: none;
+    overflow: hidden;
+}
+
+.side li{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 24px 32px;
+    letter-spacing: 1.5px;
+    color: #fff;
+}
+
+.side li i{
+    font-size: 1.5em;
+    margin-right: 32px;
+    color: #fff;
+}
+
+.side ul li *{
+    color: #fff;
+    text-decoration: none;
+}
+
+.side li:hover{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.side li.active{
+    background: #f2f7fb;
+    border-left: 5px solid #6B3B12;
+    color: #6B3B12 !important;
+}
+
+.side li.active *{
+    color: #6B3B12;
+    font-weight: 900;
+}
+
+.side button{
+    position: absolute;
+    top: 70px;
+    right: 0;
+    transform: translateX(100%);
+    box-shadow: 0 2px 123px -3px rgba(0, 0, 0, 0.3);
+    background: #6B3B12;
+    color: #fff;
+    outline: none;
+    border: none;
+    width: 30px;
+    height: 40px;
+    font-size: 1.5em;
+    cursor: pointer;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+.side i.fa-chevron-right{
+    display: none;
+}
+
+.side h1.logoClosed{
+    display: none;
+}
+
+/*-------------------Sección Estadística-----------*/
+
+.estadistica{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    align-items: center;
+}
+
+.estadistica > div{
+    display: flex;
+    background: #fff;
+    padding: 20px;
+    align-items: center;
+    color: #6B3B12;
+    border: solid 0.5px #dee2e6;
+}
+
+.estadistica div > i{
+    font-size: 60px;
+    margin-left: 40px;
+}
+
+.estadistica div >h4{
+    font-size: 40px;
+}
+
+.estadistica >div:hover{
+    color: #CA8B2A;
+    transition: ease 0.5s;
+    cursor: pointer;
+}
+
+.estadistica >div:hover i{
+  transition: ease 1s;
+  transform: rotate(1turn);
+}
+
+/*-------------------Sidebar close------------*/
+
+.side.closed{
+    width: 90px;
+}
+
+.side.closed i.fa-chevron-right{
+    display: block;
+}
+
+.side.closed i.fa-chevron-left{
+    display: none;
+}
+
+.side.closed h1.logoExpanded{
+    display: none;
+}
+
+.side.closed h1.logoClosed{
+    display: block;
+}
+
+.side.closed h1 img{
+    width: 60px;
+    margin-left: 10px;
+}
+
+/*--------------------DataTable---------------*/
+
+.tableHeader, .tableFooter{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footerPages ul li{
+    list-style: none;
+}
+
+.footerPages ul{
+    display: flex;
+    align-items: center;
+}
+
+.table table{
+    width: 100%;
+    border-collapse: collapse;
+    font: 90%/1.45em "Helvetica Neue",HelveticaNeue,Helvetica,Arial,sans-serif !important;
+    font-weight:lighter;
+}
+
+
+.table table thead th{
+    text-align: start;
+    cursor: pointer;
+}
+
+.table table thead th i{
+    margin-left: 8px;
+    opacity: 0.5;
+}
+
+.table table thead th:hover i{
+    opacity: 1;
+}
+
+
+.table table tbody tr:nth-child(odd){
+    background: #f1f1f1;
+}
+
+.table table tbody tr:hover{
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    cursor: pointer;
+}
+
+
+.table table th, .table table td{
+    padding: 10px;
+}
+
+.table table tbody{
+    border-bottom: solid 1px #000 !important;
+    border-top: solid 1px #000 !important;
+}
+
+.tableContainer{
+    margin: 20px;
+    border: solid 0.5px #DEE2E6;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background: #fff;
+}
+
+.tableHeader{
+    padding: 10px 0;
+}
+
+.tableFooter{
+    margin-top: 10px;
+    padding: 10px 0;
+}
+
+.footerPages ul li{
+    margin-right: 5px;
+}
+
+.footerPages ul li button{
+    padding: 10px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+}
+
+.footerPages ul li span.active{
+    padding: 10px 15px;
+    font-size: 14px;
+    background: #DEE2E6;
+    border-radius: 4px;
+}
+
+.footerPages ul li button:hover{
+    background: #363636;
+    border-radius: 4px;
+    color: #fff;
+}
+
+
+
+.pageShows select{
+    padding: 5px;
+    font-size: 14px;
+    border: solid 0.5px #DEE2E6;
+}
+
+.search input{
+    padding: 5px;
+    border-radius: 5px;
+    border: solid 0.5px #DEE2E6;
+}
+
+/*-------------------------Footer-----------------------------------*/
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: solid 0.5px #DEE2E6;
+    padding: 20px;
+    background: #fff;
+    width: 100%;
+}
+
+/*---------------------------------Modal-------------------------------*/
+
+.modalContainer{
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.modal{
+    width: 65%;
+    height: auto;
+    background: #fff;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: ease 0.3s;
+    transform: translateY(0%);
+}
+
+.modalHeader{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 10px;
+    background: #CA8B2A;
+    color: #fff;
+}
+
+.modalHeader i{
+    cursor: pointer;
+}
+
+.modalBody{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px 20px;
+}
+
+.modalBody *{
+    width: 100%;
+    padding: 5px 0;
+    margin-bottom: 2px;
+}
+
+.modalBody div input, textarea, select{
+    border: solid 0.5px #DEE2E6;
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 8px;
+}
+
+.modalBody div textarea{
+    padding: 8px;
+}
+/*
+.modalBody div{
+    display: flex;
+}*/
+
+.modalFooter{
+    display: flex;
+    justify-content:flex-end;
+    padding: 10px;
+    border-top: solid 0.5px #DEE2E6;
+}
+
+.modalFooter > button{
+    margin-left: 15px;
+    padding: 6px;
+    font-size: 15.5px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+}
+
+.modalFooter button.crearReporte{
+    background: #CA8B2A;
+    color: #fff;
+}
+
+.modalFooter button.closeModal i, .crearReporte i{
+    margin-right: 5px;
+}
+
+.modalFooter button.closeModal{
+   border: solid 0.5px #DEE2E6;
+}
+
+/*------------------------------Modal jsClass---------------*/
+
+.modalClose{
+    transform: translateY(-200%);
+}

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+    integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Side</title>
+  <link rel="shortcut icon" href="/images/logo.png" type="image/x-icon">
+</head>
+<body>
+  <div class="side btn2" id="side" onmouseover="mouseSobreElSide()" onmouseout="mouseSaleDelSide()">
+    
+    <!---->
+    <ul>
+      <h1 class="logoExpanded"><img src="img/LogoXLf.png" alt="logo" /></h1>
+      <h1 class="logoClosed"><img src="logo.png" alt="" /></h1>
+      <li class="home active"><a href=""><i class="fas fa-home"></i>Inicio</a></li>
+      <li class="productos"><a href=""><i class="fas fa-cubes"></i>Productos</a></li>
+      <li class="nosotros"><a href=""><i class="fas fa-info-circle"></i>Nosotros</a></li>
+      <li class="contacto"><a href=""><i class="fas fa-id-card"></i></a>Contacto</li>
+      <li class="contacto"><i class="fas fa-id-card"></i>Contacto</li>
+      <li class="contacto"><i class="fas fa-id-card"></i><a href="">Contacto</a></li>
+
+
+  
+
+    </ul>
+    <!--
+      <button id="toggleBtn" onclick="toggleBtn()">
+        <i class="fas fa-chevron-right"></i>
+        <i class="fas fa-chevron-left"></i>
+      </button>-->
+  </div>
+
+  <div class="main" ondblclick="ver()">
+    <nav>
+      <h1>
+        <i class="fas fa-align-justify" onclick="toggleBtn()"></i>Seguimiento
+        de Reportes
+      </h1>
+      <h4>
+        Marlon Encarnación <img src="img/user.JPG" alt="avatar" />
+        <i class="fa fa-ellipsis-v"></i>
+      </h4>
+    </nav>
+    <div class="estadistica">
+      <div class="reportesFinalizados">
+        <div>
+          <h4>1,520</h4>
+          <p>Reportes Finalizados</p>
+        </div>
+        <i class="fas fa-check-circle"></i>
+      </div>
+      <div class="reportesEnProceso">
+        <div>
+          <h4>345</h4>
+          <p>Reportes en Proceso</p>
+        </div>
+        <i class="fas fa-spinner"></i>
+      </div>
+      <div class="reportesPendientes">
+        <div>
+          <h4>499</h4>
+          <p>Reportes Pendientes</p>
+        </div>
+        <i class="fas fa-exclamation-circle"></i>
+      </div>
+      <div class="reportesTotales">
+        <div>
+          <h4>2,364</h4>
+          <p>Reportes Totales</p>
+        </div>
+        <i class="fas fa-chart-pie"></i>
+      </div>
+    </div>
+    <div class="accion">
+      <h3>Lista de Reportes</h3>
+      <button class="openModal">Agregar Reporte</button>
+    </div>
+
+<!---------------------------------------Modal------------------------------------------------------>
+
+    <form action="">
+    <div class="modalContainer">
+      <div class="modal modalClose">
+        <div class="modalHeader">
+          <h4>Agregar Reporte</h4>
+          <i class="fas fa-times-circle closeModal"></i>
+        </div>
+        <div class="modalBody">
+          <div>
+            <label>Centro</label><input><span></span>
+            <label>Departamento</label><input><span></span>
+          </div>
+          <!--<div><label>Departamento</label><input><span></span></div>-->
+          <div><label>Persona que reporta</label><input><span></span></div>
+          <div><label>Teléfono</label><input><span></span></div>
+          <div><label>Dispositivo</label><input><span></span></div>
+          <div><label>Descripción</label><textarea></textarea><span></span></div>
+          <div><label>Estado</label>
+            <select>
+              <option disabled selected></option>
+              <option value="Pendiente">Pendiente</option>
+              <option value="En Proceso">En Proceso</option>
+              <option value="Finalizado">Finalizado</option>
+          </select> 
+          <span></span>
+        </div>
+                              
+        </div>
+        <div class="modalFooter">
+          <button class="crearReporte"><i class="fas fa-check-circle"></i>Crear Reporte</button>
+          <button class="closeModal"><i class="fas fa-times-circle"></i>Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </form>
+
+<!--------------------------------------------dataTable------------------------------------------------------>
+
+    <div class="tableContainer">
+      <div class="tableHeader">
+        <div class="pageShows">
+          Mostrar
+          <select name="" id="">
+            <option value="5">5</option>
+            <option value="10" selected>10</option>
+            <option value="15">15</option>
+          </select>
+          reportes
+        </div>
+        <div class="search">Buscar: <input type="text" /></div>
+      </div>
+      <div class="table">
+        <table>
+          <thead>
+            <tr>
+              <th>Centro<i class="fas fa-sort"></i></th>
+              <th>Departamento<i class="fas fa-sort"></i></th>
+              <th>Persona que reporta<i class="fas fa-sort"></i></th>
+              <th>Teléfono<i class="fas fa-sort"></i></th>
+              <th>Dispositivo<i class="fas fa-sort"></i></th>
+              <th>Descripción<i class="fas fa-sort"></i></th>
+              <th>Estado<i class="fas fa-sort"></i></th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+          <thead>
+            <tr>
+              <th>Centro</th>
+              <th>Departamento</th>
+              <th>Persona que reporta</th>
+              <th>Teléfono</th>
+              <th>Dispositivo</th>
+              <th>Descripción</th>
+              <th>Estado</th>
+              <th></th>
+            </tr>
+          </thead>
+        </table>
+      </div>
+      <div class="tableFooter">
+        <div class="pageDisplayed">Mostrando 1 a 10 de 57 reportes</div>
+        <div class="footerPages">
+          <ul>
+            <li><button>Anterior</button></li>
+            <li><span class="active">1</span></li>
+            <li><button>2</button></li>
+            <li><button>3</button></li>
+            <li><button>4</button></li>
+            <li><button>5</button></li>
+            <li><button>Siguiente</button></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+<!------------------------------------------footer------------------------------------------------>
+
+    <footer>
+      <h4><strong>Copyright &copy 2014-2021 Junta Central Electoral. Todos los derechos revervados</strong></h4>
+      <h4>Version 3.1.0</h4>
+    </footer>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+
+</html>
